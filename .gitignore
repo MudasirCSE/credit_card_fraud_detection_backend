@@ -1,0 +1,25 @@
+
+# Environment and secrets
+.env
+.env.*
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Large training dataset (325 MB)
+model/creditcard.csv
+
+# IDE files
+.vscode/
+.idea/
+
+# Test/cache files
+.pytest_cache/
+.mypy_cache/
