@@ -44,10 +44,12 @@ autoencoder = load_model(
     os.path.join(ARTIFACT_DIR, "autoencoder.keras")
 )
 
-hybrid_model = xgb.XGBClassifier()
-hybrid_model.load_model(
-    os.path.join(ARTIFACT_DIR, "hybrid_model.json")
-)
+# hybrid_model = xgb.XGBClassifier()
+# hybrid_model.load_model(
+#     os.path.join(ARTIFACT_DIR, "hybrid_model.json")
+# )
+
+hybrid_model = joblib.load(os.path.join(ARTIFACT_DIR, "hybrid_model.pkl"))
 
 FEATURE_COLUMNS = model_config["feature_columns"]
 THRESHOLD = float(model_config["threshold"])
